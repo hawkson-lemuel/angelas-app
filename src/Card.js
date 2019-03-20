@@ -1,5 +1,5 @@
 import React from 'react'
-export default function Card() {
+const Card = () => {
     return (
         <div className="section">
             <div className="image"></div>
@@ -10,3 +10,4 @@ export default function Card() {
         </div>
     )
 }
+export default Card
