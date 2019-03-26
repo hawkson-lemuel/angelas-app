@@ -5,7 +5,7 @@ const Card = (props) => {
             <div className="image"></div>
             <div className="description">
                 <h4>{props.course.name}</h4>
-                <p>Nii Apa</p>
+                <p>{props.course.teacher}</p>
             </div>
         </div>
     )

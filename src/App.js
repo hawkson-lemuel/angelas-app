@@ -5,31 +5,31 @@ import Card from './Card'
 
 
 class App extends Component {
-	constructor(){
+	constructor() {
 		super();
 		this.state = {
-			courses:[
+			courses: [
 				{
-				name:"Algorithm",
-				teacher:"Angela"
-			},
+					name: "Algorithm",
+					teacher: "Angela"
+				},
 				{
-				name:"Data Structures",
-				teacher:"Gloria"
-			},
+					name: "Data Structures",
+					teacher: "Gloria"
+				},
 				{
-				name:"Architecture",
-				teacher:"Jason"
-			},
+					name: "Architecture",
+					teacher: "Jason"
+				},
 				{
-				name:"Linear Electronics",
-				teacher:"Kofi"
-			},
-		]
-		}	
+					name: "Linear Electronics",
+					teacher: "Kofi"
+				},
+			]
+		}
 	}
 
-	componentDidMount(){
+	componentDidMount() {
 		// this.getPosts()
 	}
 
@@ -41,20 +41,21 @@ class App extends Component {
 	// 	})
 	// }
 
-  render() {
-    return (
-      <div className="App">
-        <Header />
+	render() {
+		return (
+			<div className="App">
+				<Header />
+				<div className="coursesTitle"> <p>Courses</p></div>
 
-        <div className="main-wrapper">
-			{
-				this.state.courses.map(courseItem=>{
-					return <Card course={courseItem} />
-				})
-			}
-        </div>
-      </div>
-    );
-  }
+				<div className="main-wrapper">
+					{
+						this.state.courses.map(courseItem => {
+							return <Card course={courseItem} />
+						})
+					}
+				</div>
+			</div>
+		);
+	}
 }
 export default App;
