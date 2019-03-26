@@ -9,19 +9,23 @@ class App extends Component {
 		super();
 		this.state = {
 			courses: [
-				{
+				{	
+					id:1,
 					name: "Algorithm",
 					teacher: "Angela"
 				},
 				{
+					id:2,
 					name: "Data Structures",
 					teacher: "Gloria"
 				},
 				{
+					id:3,
 					name: "Architecture",
 					teacher: "Jason"
 				},
 				{
+					id:4,
 					name: "Linear Electronics",
 					teacher: "Kofi"
 				},
@@ -30,16 +34,9 @@ class App extends Component {
 	}
 
 	componentDidMount() {
+
 		// this.getPosts()
 	}
-
-	// getPosts=()=>{
-	// 	fetch('https://jsonplaceholder.typicode.com/users')
-	// 	.then((response) => {return response.json()})
-	// 	.then((result)=>{
-	// 		console.log(result)
-	// 	})
-	// }
 
 	render() {
 		return (
@@ -50,7 +47,7 @@ class App extends Component {
 				<div className="main-wrapper">
 					{
 						this.state.courses.map(courseItem => {
-							return <Card course={courseItem} />
+							return <Card key={courseItem.id} course={courseItem} />
 						})
 					}
 				</div>
