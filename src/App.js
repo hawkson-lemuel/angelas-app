@@ -9,23 +9,23 @@ class App extends Component {
 		super();
 		this.state = {
 			courses: [
-				{	
-					id:1,
+				{
+					id: 1,
 					name: "Algorithm",
 					teacher: "Angela"
 				},
 				{
-					id:2,
+					id: 2,
 					name: "Data Structures",
 					teacher: "Gloria"
 				},
 				{
-					id:3,
+					id: 3,
 					name: "Architecture",
 					teacher: "Jason"
 				},
 				{
-					id:4,
+					id: 4,
 					name: "Linear Electronics",
 					teacher: "Kofi"
 				},
@@ -36,7 +36,10 @@ class App extends Component {
 	componentDidMount() {
 
 		// this.getPosts()
+		let val = this.addNumbers(2, 3)
+		console.log(val)
 	}
+	addNumbers = (num1, num2) => { return num1 + num2; }
 
 	render() {
 		return (
