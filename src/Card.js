@@ -1,10 +1,10 @@
 import React from 'react'
-const Card = () => {
+const Card = (props) => {
     return (
-        <div className="section">
+        <div className="card">
             <div className="image"></div>
             <div className="description">
-                <h4>Laravel</h4>
+                <h4>{props.course.name}</h4>
                 <p>Nii Apa</p>
             </div>
         </div>
