@@ -36,7 +36,7 @@ class App extends Component {
 	componentDidMount() {
 
 		// this.getPosts()
-		let val = this.addNumbers(2, 3)
+		let val = this.addNumbers(2, 10)
 		console.log(val)
 	}
 	addNumbers = (num1, num2) => { return num1 + num2; }
