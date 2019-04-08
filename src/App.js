@@ -8,38 +8,18 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			courses: [
-				{
-					id: 1,
-					name: "Algorithm",
-					teacher: "Angela"
-				},
-				{
-					id: 2,
-					name: "Data Structures",
-					teacher: "Gloria"
-				},
-				{
-					id: 3,
-					name: "Architecture",
-					teacher: "Jason"
-				},
-				{
-					id: 4,
-					name: "Linear Electronics",
-					teacher: "Kofi"
-				},
-			]
+			courses: []
 		}
 	}
 
 	componentDidMount() {
+		console.log(this.state.courses)
 
-		// this.getPosts()
-		let val = this.addNumbers(2, 3)
-		console.log(val)
+		fetch('https://jsonplaceholder.typicode.com/posts').then(result=>result.json()).then(result=>{
+			this.setState({courses:result})
+			console.log(this.state.courses)
+		})
 	}
-	addNumbers = (num1, num2) => { return num1 + num2; }
 
 	render() {
 		return (
