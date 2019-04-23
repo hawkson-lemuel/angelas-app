@@ -3,9 +3,12 @@ const Card = (props) => {
     return (
         <div className="card">
             <div className="image"></div>
+			<div className="name-price-wrapper">
+				<p>Item Name</p>
+				<p>Item Price</p>
+			</div>
             <div className="description">
-                <h4>{props.course.title}</h4>
-                <p>{props.course.body}</p>
+				<p>This is some descriptive text</p>
             </div>
         </div>
     )
